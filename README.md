@@ -1,1 +1,1 @@
-# isa-nchu-events
+# isa-nchu
