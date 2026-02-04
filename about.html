@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About ISA NCHU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- GLOBAL STYLES (Matching Home/Team Pages) --- */
+        :root {
+            --nchu-blue: #004F9F;
+            --nchu-gold: #FFD700;
+            --text-dark: #333;
+            --bg-light: #f4f7f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white; /* Clean white background for About page */
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* --- HEADER SECTION --- */
+        h1 {
+            color: var(--nchu-blue);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .mission-text {
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* --- THREE PILLARS (GRID) --- */
+        .pillars-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .pillar-card {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            border-bottom: 4px solid var(--nchu-blue);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            background: white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .icon-box {
+            font-size: 40px;
+            color: var(--nchu-blue);
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* --- COMMITTEE SECTION --- */
+        .committee-section {
+            margin-top: 60px;
+            background: var(--nchu-blue);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .committee-section h2 {
+            margin-bottom: 15px;
+            color: var(--nchu-gold);
+        }
+
+        .committee-section p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Who We Are</h1>
+    <p class="mission-text">
+        The Indian Students Association (ISA) at National Chung Hsing University is a home away from home. 
+        We are a student-run volunteer group dedicated to helping you survive and thrive in Taiwan.
+    </p>
+
+    <div class="pillars-container">
+        
+        <div class="pillar-card">
+            <div class="icon-box"><i class="fas fa-compass"></i></div>
+            <div class="card-title">New Student Guidance</div>
+            <p class="card-desc">
+                Confused about ARCs, SIM cards, or dorms? We help new students answer questions about life in <strong>Taichung</strong>, navigating the <strong>NCHU campus</strong>, and settling into Taiwan smoothly.
+            </p>
+        </div>
+
+        <div class="pillar-card">
+            <div class="icon-box"><i class="fas fa-music"></i></div>
+            <div class="card-title">Events & Festivals</div>
+            <p class="card-desc">
+                We celebrate major Indian festivals (like Diwali and Holi) and organize social gatherings. It's not just about study—we make sure you have fun and build memories.
+            </p>
+        </div>
+
+        <div class="pillar-card">
+            <div class="icon-box"><i class="fas fa-hands-helping"></i></div>
+            <div class="card-title">Community Support</div>
+            <p class="card-desc">
+                From finding vegetarian food options to academic advice from seniors, our committee works hard to solve the day-to-day challenges international students face.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="committee-section">
+        <h2>We Are Here For You</h2>
+        <p>
+            Our committee consists of elected student representatives who volunteer their time to ensure the Indian community at NCHU is strong, united, and well-represented.
+        </p>
+    </div>
+
+</body>
+</html>
