@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact ISA NCHU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- GLOBAL STYLES (Matching your Home Page) --- */
+        :root {
+            --nchu-blue: #004F9F;
+            --text-dark: #333;
+            --bg-light: #f4f7f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: var(--nchu-blue);
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        p.subtitle {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        /* --- CONTACT GRID --- */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* --- CARDS --- */
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .btn-contact {
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: opacity 0.3s;
+            color: white;
+            display: inline-block;
+        }
+
+        .btn-contact:hover {
+            opacity: 0.9;
+        }
+
+        /* --- SPECIFIC BRAND COLORS --- */
+        
+        /* Gmail */
+        .gmail .icon-circle { background: #EA4335; }
+        .gmail .btn-contact { background: #EA4335; }
+
+        /* WhatsApp */
+        .whatsapp .icon-circle { background: #25D366; }
+        .whatsapp .btn-contact { background: #25D366; }
+
+        /* Instagram */
+        .instagram .icon-circle { 
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+        }
+        .instagram .btn-contact { 
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Get in Touch</h1>
+    <p class="subtitle">Have questions? Reach out to the Indian Students Association!</p>
+
+    <div class="contact-container">
+
+        <div class="contact-card gmail">
+            <div class="icon-circle">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="card-title">Email Us</div>
+            <div class="card-text">For official inquiries & collabs</div>
+            <a href="mailto:nchu.indiansa@gmail.com" class="btn-contact">Send Email</a>
+        </div>
+
+        <div class="contact-card whatsapp">
+            <div class="icon-circle">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="card-title">Join the Group</div>
+            <div class="card-text">Connect with the community</div>
+            <a href="https://chat.whatsapp.com/J803eDKNnQ3K01yeIHb7fl" target="_blank" class="btn-contact">Join WhatsApp</a>
+        </div>
+
+        <div class="contact-card instagram">
+            <div class="icon-circle">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="card-title">Follow Us</div>
+            <div class="card-text">Updates, photos & stories</div>
+            <a href="https://www.instagram.com/nchu_indians/" target="_blank" class="btn-contact">Visit Profile</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
