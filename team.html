@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <style>
+<style>
         /* --- GLOBAL STYLES --- */
         :root {
             --nchu-blue: #004F9F;
@@ -23,7 +23,9 @@
             background-color: var(--bg-light);
             color: var(--text-dark);
             text-align: center;
-            padding: 40px 20px;
+            /* REMOVED SIDE PADDING TO FORCE WIDTH */
+            padding: 40px 0; 
+            width: 100%;
         }
 
         h1 {
@@ -44,15 +46,15 @@
         .team-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            /* CHANGED THIS LINE BELOW */
+            gap: 20px;
+            /* FORCING FULL WIDTH HERE */
             max-width: 100%; 
-            margin: 0 auto;
-            /* Added padding so cards don't touch the very edge of the screen */
-            padding: 0 20px; 
+            width: 100%;
+            margin: 0;
+            padding: 0 15px; /* Tiny padding so cards don't touch the screen edge */
         }
 
-        /* --- CARD STYLE --- */
+        /* --- REST OF THE CARD STYLES (SAME AS BEFORE) --- */
         .member-card {
             background: white;
             padding: 30px 20px;
@@ -62,21 +64,20 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            border-top: 5px solid var(--nchu-blue); /* Blue accent on top */
+            border-top: 5px solid var(--nchu-blue);
         }
 
         .member-card:hover {
             transform: translateY(-10px);
         }
 
-        /* --- PHOTO PLACEHOLDER --- */
         .photo-frame {
             width: 120px;
             height: 120px;
             border-radius: 50%;
             background: #eee;
             margin-bottom: 20px;
-            overflow: hidden; /* Ensures photo stays circular */
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -94,7 +95,6 @@
             color: #bbb;
         }
 
-        /* --- TEXT STYLES --- */
         .name {
             font-size: 1.4rem;
             font-weight: 700;
@@ -117,7 +117,6 @@
             line-height: 1.4;
             padding: 0 10px;
         }
-
     </style>
 </head>
 <body>
