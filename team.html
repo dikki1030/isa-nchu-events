@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISA NCHU Team 2025-2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- GLOBAL STYLES --- */
+        :root {
+            --nchu-blue: #004F9F;
+            --nchu-gold: #FFD700;
+            --text-dark: #333;
+            --bg-light: #f4f7f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: var(--nchu-blue);
+            margin-bottom: 5px;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: #666;
+            margin-bottom: 40px;
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+
+        /* --- TEAM GRID --- */
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* --- CARD STYLE --- */
+        .member-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-top: 5px solid var(--nchu-blue); /* Blue accent on top */
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* --- PHOTO PLACEHOLDER --- */
+        .photo-frame {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #eee;
+            margin-bottom: 20px;
+            overflow: hidden; /* Ensures photo stays circular */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--nchu-blue);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .placeholder-icon {
+            font-size: 50px;
+            color: #bbb;
+        }
+
+        /* --- TEXT STYLES --- */
+        .name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .role {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--nchu-blue);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .degree {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.4;
+            padding: 0 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Elected Representatives</h1>
+    <h3>2025 - 2026 Session</h3>
+
+    <div class="team-container">
+
+        <div class="member-card">
+            <div class="photo-frame">
+                <i class="fas fa-user placeholder-icon"></i> 
+            </div>
+            <div class="name">Sonali Behera</div>
+            <div class="role">President</div>
+            <div class="degree">International Doctoral Program in Agriculture</div>
+        </div>
+
+        <div class="member-card">
+            <div class="photo-frame">
+                <i class="fas fa-user placeholder-icon"></i>
+            </div>
+            <div class="name">Anand Chauhan</div>
+            <div class="role">Vice President</div>
+            <div class="degree">Doctoral Program in Graduate Institute of International Politics</div>
+        </div>
+
+        <div class="member-card">
+            <div class="photo-frame">
+                <i class="fas fa-user placeholder-icon"></i>
+            </div>
+            <div class="name">Sai Dheeraj</div>
+            <div class="role">Associate President</div>
+            <div class="degree">PhD Program in Computer Science And Engineering</div>
+        </div>
+
+        <div class="member-card">
+            <div class="photo-frame">
+                <i class="fas fa-user placeholder-icon"></i>
+            </div>
+            <div class="name">Preetismita Saikia</div>
+            <div class="role">Secretary</div>
+            <div class="degree">Doctoral Program in Tissue Engineering And Regenerative Medicine</div>
+        </div>
+
+        <div class="member-card">
+            <div class="photo-frame">
+                <i class="fas fa-user placeholder-icon"></i>
+            </div>
+            <div class="name">Trupti Bembalkar</div>
+            <div class="role">Joint Secretary</div>
+            <div class="degree">PhD Program in Chemical Engineering</div>
+        </div>
+
+        <div class="member-card">
+            <div class="photo-frame">
+                <i class="fas fa-user placeholder-icon"></i>
+            </div>
+            <div class="name">Ravi Kumar Reddy</div>
+            <div class="role">Joint Secretary</div>
+            <div class="degree">Master's Program in Material Science And Engineering</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
