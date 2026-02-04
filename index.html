@@ -6,12 +6,11 @@
     <title>ISA NCHU | Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* --- GLOBAL VARIABLES (Easy to change colors here) --- */
+        /* --- GLOBAL VARIABLES --- */
         :root {
-            --nchu-blue: #004F9F;  /* Official-ish NCHU Blue */
+            --nchu-blue: #004F9F;
             --accent-gold: #FFD700;
             --text-dark: #333;
-            --text-light: #f4f4f4;
         }
 
         /* --- BASIC RESET --- */
@@ -21,56 +20,15 @@
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
+            overflow-x: hidden; /* Prevents horizontal scroll */
         }
 
         a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-
-        /* --- NAVIGATION BAR --- */
-        nav {
-            background: white;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--nchu-blue);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a:hover {
-            color: var(--nchu-blue);
-            font-weight: 600;
-        }
-
-        .btn-join {
-            background: var(--nchu-blue);
-            color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-        }
-
-        .btn-join:hover {
-            background: #003366;
-            transform: scale(1.05);
-        }
 
         /* --- HERO SECTION (The Big Banner) --- */
         .hero {
-            height: 90vh; /* 90% of screen height */
+            /* Changed height to 100vh so it fills the view */
+            min-height: 100vh; 
             background: linear-gradient(rgba(0, 79, 159, 0.7), rgba(0, 79, 159, 0.4)), 
                         url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/National_Chung_Hsing_University_Library.JPG/1200px-National_Chung_Hsing_University_Library.JPG');
             background-size: cover;
@@ -81,7 +39,7 @@
             align-items: center;
             text-align: center;
             color: white;
-            padding: 0 20px;
+            padding: 20px;
         }
 
         .hero h1 {
@@ -106,6 +64,7 @@
             border-radius: 5px;
             font-weight: bold;
             font-size: 1rem;
+            cursor: pointer;
         }
 
         .btn-primary {
@@ -127,6 +86,7 @@
         .features {
             padding: 4rem 10%;
             text-align: center;
+            background: white;
         }
 
         .section-title {
@@ -164,38 +124,22 @@
             color: white;
             text-align: center;
             padding: 2rem;
-            margin-top: auto;
-        }
-
-        /* --- MOBILE RESPONSIVENESS --- */
-        @media (max-width: 768px) {
-            .nav-links { display: none; } /* Simple hide for mobile tutorial */
-            .hero h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">ISA NCHU</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="events.html">Events</a></li> <li><a href="#">Team</a></li>
-            <li><a href="#" class="btn-join">Join Us</a></li>
-        </ul>
-    </nav>
-
     <section class="hero">
         <h1>Welcome to ISA</h1>
         <p>The International Student Association of National Chung Hsing University. Your home away from home.</p>
+        
         <div class="hero-buttons">
-            <a href="events.html" class="btn-hero btn-primary">Upcoming Events</a>
-            <a href="#about" class="btn-hero btn-outline">Learn More</a>
+            <a href="https://sites.google.com/view/YOUR-SITE-URL/events" target="_parent" class="btn-hero btn-primary">Upcoming Events</a>
+            <a href="https://sites.google.com/view/YOUR-SITE-URL/about" target="_parent" class="btn-hero btn-outline">Learn More</a>
         </div>
     </section>
 
-    <section class="features" id="about">
+    <section class="features">
         <h2 class="section-title">Why Join ISA?</h2>
         <div class="feature-grid">
             <div class="feature-card">
@@ -218,7 +162,6 @@
 
     <footer>
         <p>© 2026 ISA NCHU. Made with ❤️ in Taichung.</p>
-        <p>Follow us on Instagram | Facebook</p>
     </footer>
 
 </body>
