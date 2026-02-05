@@ -13,7 +13,6 @@
             --nchu-blue: #004F9F;
             --nchu-gold: #FFD700;
             --text-dark: #333;
-            --bg-light: #f4f7f6;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,8 +34,9 @@
             padding: 0 20px;
         }
 
-        /* --- SECTION 1: HERO (WELCOME) --- */
+        /* --- HERO SECTION --- */
         .hero {
+            /* Placeholder image of university life */
             background: linear-gradient(rgba(0, 79, 159, 0.8), rgba(0, 79, 159, 0.6)), 
                         url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
@@ -78,7 +78,7 @@
         .view-all-link { color: #666; font-size: 0.9rem; font-weight: 600; }
         .view-all-link:hover { color: var(--nchu-blue); }
 
-        /* --- SECTION 2: EVENTS PREVIEW --- */
+        /* --- EVENTS PREVIEW SECTION --- */
         .events-preview { margin-bottom: 60px; }
         .events-grid {
             display: grid;
@@ -99,15 +99,15 @@
         .event-body h3 { margin-bottom: 10px; font-size: 1.2rem; }
         .event-body p { color: #666; font-size: 0.9rem; margin-bottom: 15px; }
 
-        /* --- SECTION 3: GALLERY GLIMPSE --- */
+        /* --- GALLERY GLIMPSE SECTION --- */
         .gallery-preview { margin-bottom: 60px; }
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 images in a row */
+            grid-template-columns: repeat(4, 1fr);
             gap: 15px;
         }
         .gallery-item {
-            height: 200px; /* Fixed height for squares */
+            height: 200px;
             border-radius: 10px;
             overflow: hidden;
             position: relative;
@@ -120,22 +120,17 @@
         }
         .gallery-item:hover img { transform: scale(1.1); }
 
-        /* Responsive Gallery for Mobile */
         @media (max-width: 768px) {
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
-        /* --- SECTION 4: CONTACT BANNER --- */
+        /* --- CONTACT BANNER --- */
         .contact-banner {
             background: var(--nchu-blue);
             color: white;
             padding: 40px;
             border-radius: 15px;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
         .contact-banner h2 { margin-bottom: 10px; }
         .contact-banner p { margin-bottom: 20px; opacity: 0.9; }
@@ -148,8 +143,9 @@
         <div class="main-container">
             <h1>Welcome to ISA NCHU</h1>
             <p>Your home away from home. Join our community of international students.</p>
-            <a href="https://dikki1030.github.io/isa-nchu-events/events.html" target="_top" class="btn btn-gold">Upcoming Events</a>
-            <a href="https://dikki1030.github.io/isa-nchu-events/contact.html" class="btn btn-outline">Join Us</a>
+            <a href="REPLACE_WITH_YOUR_GOOGLE_SITES_EVENTS_URL" target="_top" class="btn btn-gold">Upcoming Events</a>
+            
+            <a href="REPLACE_WITH_YOUR_GOOGLE_SITES_CONTACT_URL" target="_top" class="btn btn-outline">Join Us</a>
         </div>
     </div>
 
@@ -158,24 +154,24 @@
         <section class="events-preview">
             <div class="section-header">
                 <div class="section-title">Happening Soon</div>
-                <a href="https://dikki1030.github.io/isa-nchu-events/events.html" target="_top" class="view-all-link">View All Events <i class="fas fa-arrow-right"></i></a>
+                <a href="REPLACE_WITH_YOUR_GOOGLE_SITES_EVENTS_URL" target="_top" class="view-all-link">View All Events <i class="fas fa-arrow-right"></i></a>
             </div>
 
             <div class="events-grid">
                 <div class="event-card">
-                    <div class="event-date">MARCH 15</div>
+                    <div class="event-date">APRIL 2026</div>
                     <div class="event-body">
-                        <h3>Holi Festival of Colors</h3>
-                        <p>Join us at the main field for colors, music, and dance.</p>
-                        <a href="https://dikki1030.github.io/isa-nchu-events/events.html" target="_top" style="color: var(--nchu-blue); font-weight:bold;">Read More</a>
+                        <h3>Indian Night 2026</h3>
+                        <p>Cultural showcase, food, music, and dance. Open to all students!</p>
+                        <a href="REPLACE_WITH_YOUR_GOOGLE_SITES_EVENTS_URL" target="_top" style="color: var(--nchu-blue); font-weight:bold;">See Details</a>
                     </div>
                 </div>
                 <div class="event-card">
-                    <div class="event-date">APRIL 02</div>
+                    <div class="event-date">OCT/NOV 2026</div>
                     <div class="event-body">
-                        <h3>Career Talk 2026</h3>
-                        <p>Senior alumni share tips on finding jobs in Taiwan.</p>
-                        <a href="https://sites.google.com/view/indianstudentsassociationnchu/events" target="_top" style="color: var(--nchu-blue); font-weight:bold;">Read More</a>
+                        <h3>Diwali Festival</h3>
+                        <p>The festival of lights. Diya lighting, sweets, and performances.</p>
+                        <a href="REPLACE_WITH_YOUR_GOOGLE_SITES_EVENTS_URL" target="_top" style="color: var(--nchu-blue); font-weight:bold;">Save the Date</a>
                     </div>
                 </div>
             </div>
@@ -184,9 +180,8 @@
         <section class="gallery-preview">
             <div class="section-header">
                 <div class="section-title">Gallery Glimpse</div>
-                <a href="https://dikki1030.github.io/isa-nchu-events/gallery.html" target="_top" class="view-all-link">See All Photos <i class="fas fa-arrow-right"></i></a>
+                <a href="REPLACE_WITH_YOUR_GOOGLE_SITES_GALLERY_URL" target="_top" class="view-all-link">See All Photos <i class="fas fa-arrow-right"></i></a>
             </div>
-
             <div class="gallery-grid">
                 <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=400&q=80" alt="Event 1"></div>
                 <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=400&q=80" alt="Event 2"></div>
@@ -198,10 +193,11 @@
         <section class="contact-banner">
             <h2>Have Questions?</h2>
             <p>We are here to help you settle into life at NCHU.</p>
+            <a href="REPLACE_WITH_YOUR_GOOGLE_SITES_CONTACT_URL" target="_top" class="btn btn-gold">Contact Us</a>
         </section>
 
     </div>
-
+    
     <div style="height: 50px;"></div>
 
 </body>
