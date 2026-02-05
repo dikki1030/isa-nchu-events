@@ -3,166 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISA NCHU | Home</title>
+    <title>ISA NCHU Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        /* --- GLOBAL VARIABLES --- */
+        /* --- GLOBAL STYLES --- */
         :root {
             --nchu-blue: #004F9F;
-            --accent-gold: #FFD700;
+            --nchu-gold: #FFD700;
             --text-dark: #333;
+            --bg-light: #f4f7f6;
         }
 
-        /* --- BASIC RESET --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
+            background-color: white;
             color: var(--text-dark);
-            overflow-x: hidden; /* Prevents horizontal scroll */
+            width: 100%;
         }
 
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        a { text-decoration: none; }
 
-        /* --- HERO SECTION (The Big Banner) --- */
+        /* --- MAIN CONTAINER --- */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        /* --- SECTION 1: HERO (WELCOME) --- */
         .hero {
-            /* Changed height to 100vh so it fills the view */
-            min-height: 100vh; 
-            background: linear-gradient(rgba(0, 79, 159, 0.7), rgba(0, 79, 159, 0.4)), 
-                        url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/National_Chung_Hsing_University_Library.JPG/1200px-National_Chung_Hsing_University_Library.JPG');
+            background: linear-gradient(rgba(0, 79, 159, 0.8), rgba(0, 79, 159, 0.6)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
             color: white;
-            padding: 20px;
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 50px;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px auto; opacity: 0.9; }
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 2rem;
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+            margin: 5px;
         }
+        .btn-gold { background: var(--nchu-gold); color: var(--nchu-blue); }
+        .btn-gold:hover { background: #ffe033; transform: translateY(-3px); }
+        
+        .btn-outline { border: 2px solid white; color: white; }
+        .btn-outline:hover { background: white; color: var(--nchu-blue); transform: translateY(-3px); }
 
-        .hero-buttons {
+        /* --- SECTION HEADERS --- */
+        .section-header {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .section-title { font-size: 1.8rem; color: var(--nchu-blue); font-weight: 700; }
+        .view-all-link { color: #666; font-size: 0.9rem; font-weight: 600; }
+        .view-all-link:hover { color: var(--nchu-blue); }
+
+        /* --- SECTION 2: EVENTS PREVIEW --- */
+        .events-preview { margin-bottom: 60px; }
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .event-card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .event-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .event-date { background: var(--nchu-blue); color: white; padding: 10px; font-weight: bold; text-align: center; }
+        .event-body { padding: 20px; }
+        .event-body h3 { margin-bottom: 10px; font-size: 1.2rem; }
+        .event-body p { color: #666; font-size: 0.9rem; margin-bottom: 15px; }
+
+        /* --- SECTION 3: GALLERY GLIMPSE --- */
+        .gallery-preview { margin-bottom: 60px; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 images in a row */
             gap: 15px;
         }
-
-        .btn-hero {
-            padding: 12px 30px;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: var(--accent-gold);
-            color: var(--nchu-blue);
-        }
-
-        .btn-outline {
-            border: 2px solid white;
-            color: white;
-        }
-
-        .btn-outline:hover {
-            background: white;
-            color: var(--nchu-blue);
-        }
-
-        /* --- FEATURES SECTION --- */
-        .features {
-            padding: 4rem 10%;
-            text-align: center;
-            background: white;
-        }
-
-        .section-title {
-            color: var(--nchu-blue);
-            margin-bottom: 3rem;
-            font-size: 2rem;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: #f9f9f9;
-            padding: 2rem;
+        .gallery-item {
+            height: 200px; /* Fixed height for squares */
             border-radius: 10px;
-            transition: transform 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
+            position: relative;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        /* Responsive Gallery for Mobile */
+        @media (max-width: 768px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background: #222;
+        /* --- SECTION 4: CONTACT BANNER --- */
+        .contact-banner {
+            background: var(--nchu-blue);
             color: white;
+            padding: 40px;
+            border-radius: 15px;
             text-align: center;
-            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
+        .contact-banner h2 { margin-bottom: 10px; }
+        .contact-banner p { margin-bottom: 20px; opacity: 0.9; }
+
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <h1>Welcome to ISA</h1>
-        <p>The International Student Association of National Chung Hsing University. Your home away from home.</p>
-        
-        <div class="hero-buttons">
-            <a href="https://sites.google.com/view/YOUR-SITE-URL/events" target="_parent" class="btn-hero btn-primary">Upcoming Events</a>
-            <a href="https://sites.google.com/view/YOUR-SITE-URL/about" target="_parent" class="btn-hero btn-outline">Learn More</a>
+    <div class="hero">
+        <div class="main-container">
+            <h1>Welcome to ISA NCHU</h1>
+            <p>Your home away from home. Join our community of international students.</p>
+            <a href="https://dikki1030.github.io/isa-nchu-events/events.html" target="_top" class="btn btn-gold">Upcoming Events</a>
+            <a href="https://dikki1030.github.io/isa-nchu-events/contact.html" class="btn btn-outline">Join Us</a>
         </div>
-    </section>
+    </div>
 
-    <section class="features">
-        <h2 class="section-title">Why Join ISA?</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <div class="feature-icon">🌏</div>
-                <h3>Cultural Exchange</h3>
-                <p>Meet students from over 30 countries and share your unique culture with Taiwan.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🎉</div>
-                <h3>Fun Activities</h3>
-                <p>From welcome parties to trips around Taichung, we ensure your student life is memorable.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📚</div>
-                <h3>Academic Support</h3>
-                <p>Access study groups, senior advice, and resources to help you excel at NCHU.</p>
-            </div>
-        </div>
-    </section>
+    <div class="main-container">
 
-    <footer>
-        <p>© 2026 ISA NCHU. Made with ❤️ in Taichung.</p>
-    </footer>
+        <section class="events-preview">
+            <div class="section-header">
+                <div class="section-title">Happening Soon</div>
+                <a href="https://dikki1030.github.io/isa-nchu-events/events.html" target="_top" class="view-all-link">View All Events <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">MARCH 15</div>
+                    <div class="event-body">
+                        <h3>Holi Festival of Colors</h3>
+                        <p>Join us at the main field for colors, music, and dance.</p>
+                        <a href="https://dikki1030.github.io/isa-nchu-events/events.html" target="_top" style="color: var(--nchu-blue); font-weight:bold;">Read More</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">APRIL 02</div>
+                    <div class="event-body">
+                        <h3>Career Talk 2026</h3>
+                        <p>Senior alumni share tips on finding jobs in Taiwan.</p>
+                        <a href="https://dikki1030.github.io/isa-nchu-events/events.html" target="_top" style="color: var(--nchu-blue); font-weight:bold;">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-preview">
+            <div class="section-header">
+                <div class="section-title">Gallery Glimpse</div>
+                <a href="https://dikki1030.github.io/isa-nchu-events/gallery.html" target="_top" class="view-all-link">See All Photos <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=400&q=80" alt="Event 1"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=400&q=80" alt="Event 2"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=400&q=80" alt="Event 3"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544928147-79a79476e635?auto=format&fit=crop&w=400&q=80" alt="Event 4"></div>
+            </div>
+        </section>
+
+        <section class="contact-banner">
+            <h2>Have Questions?</h2>
+            <p>We are here to help you settle into life at NCHU.</p>
+            <a href="https://dikki1030.github.io/isa-nchu-events/gallery.html" target="_top" class="btn btn-gold">Contact Us</a>
+        </section>
+
+    </div>
+
+    <div style="height: 50px;"></div>
 
 </body>
 </html>
