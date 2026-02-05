@@ -3,119 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISA NCHU Events</title>
+    <title>ISA NCHU Upcoming Events</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* CSS STYLES */
+        /* --- GLOBAL VARIABLES --- */
         :root {
-            --primary-color: #0056b3; /* NCHU-ish Blue */
+            --nchu-blue: #004F9F;
+            --nchu-gold: #FFD700;
             --text-dark: #333;
-            --text-light: #666;
             --bg-light: #f9f9f9;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #ffffff; /* White background blends with Google Sites */
+            padding: 40px 20px;
+            background-color: #ffffff;
+            color: var(--text-dark);
         }
 
         h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid #eee;
+            color: var(--nchu-blue);
+            border-bottom: 3px solid var(--nchu-gold);
             padding-bottom: 10px;
+            display: inline-block;
+            margin-bottom: 30px;
         }
 
         /* CARD GRID LAYOUT */
         .event-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         /* INDIVIDUAL CARD STYLE */
         .event-card {
             background: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            border: 1px solid #eee;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
         }
 
         .event-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
         .card-header {
-            background-color: var(--primary-color);
+            background-color: var(--nchu-blue);
             color: white;
-            padding: 15px;
-            font-weight: bold;
+            padding: 20px;
+            font-size: 1.2rem;
+            font-weight: 700;
         }
 
         .card-body {
-            padding: 15px;
+            padding: 20px;
+            flex-grow: 1; /* Pushes button to bottom */
         }
 
         .date-badge {
-            background: #eee;
-            color: var(--text-dark);
-            padding: 4px 8px;
+            background: var(--nchu-gold);
+            color: var(--nchu-blue);
+            padding: 5px 10px;
             border-radius: 4px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
+            font-weight: 700;
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
+
+        .event-tag {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .highlights-list {
+            margin: 15px 0;
+            padding-left: 20px;
+            font-size: 0.95rem;
+            color: #444;
+        }
+        .highlights-list li { margin-bottom: 5px; }
 
         .btn {
             display: block;
             width: 100%;
-            padding: 10px 0;
+            padding: 12px 0;
             margin-top: 15px;
-            background-color: var(--primary-color);
+            background-color: var(--nchu-blue);
             color: white;
             text-align: center;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         .btn:hover {
-            background-color: #004494;
+            background-color: #003366;
         }
 
-        /* RESPONSIVE TWEAKS */
-        @media (max-width: 600px) {
-            body { padding: 10px; }
+        .btn-disabled {
+            background-color: #ccc;
+            cursor: default;
         }
+        .btn-disabled:hover { background-color: #ccc; }
+
     </style>
 </head>
 <body>
 
-    <h2>📅 Upcoming ISA Events</h2>
+    <div style="text-align: center; margin-bottom: 40px;">
+        <h2>📅 Upcoming Major Events</h2>
+    </div>
     
     <div class="event-container">
         
         <div class="event-card">
-            <div class="card-header">Welcome Party Spring 2026</div>
+            <div class="card-header">Indian Night 2026</div>
             <div class="card-body">
-                <span class="date-badge">Feb 20, 2026 • 6:00 PM</span>
-                <p>Join us for food, games, and networking with new international students.</p>
-                <p><strong>Location:</strong> Student Activity Center</p>
-                <a href="https://forms.google.com" target="_blank" class="btn">Register Now</a>
+                <span class="date-badge">April 2026</span>
+                <div class="event-tag"><i class="fas fa-globe"></i> Cultural Event & Networking</div>
+                <p>A grand unification of Holi, Ugadi, Gudi Padwa, and Maha Shivaratri into one massive cultural showcase.</p>
+                
+                <strong>Event Highlights:</strong>
+                <ul class="highlights-list">
+                    <li>Multi-state cultural performances 🎭</li>
+                    <li>Traditional attire showcase 👗</li>
+                    <li>Authentic Indian Food Corner 🍛</li>
+                    <li>Music & Dance 💃</li>
+                </ul>
+                <p><strong>Open to:</strong> All Students & Faculty</p>
+                <a href="#" class="btn btn-disabled">Registration Opens Soon</a>
             </div>
         </div>
 
         <div class="event-card">
-            <div class="card-header">Machine Learning Workshop</div>
+            <div class="card-header">Welcome Party (Fall)</div>
             <div class="card-body">
-                <span class="date-badge">March 05, 2026 • 2:00 PM</span>
-                <p>Intro to TinyML and Python. Bring your laptop!</p>
-                <p><strong>Location:</strong> Engineering Building II</p>
-                <a href="#" target="_blank" class="btn">Details Coming Soon</a>
+                <span class="date-badge">September 2026</span>
+                <div class="event-tag"><i class="fas fa-user-graduate"></i> Orientation</div>
+                <p>Welcoming our new Indian students! Get guidance on campus life, university procedures, and settling in Taiwan.</p>
+                
+                <strong>Event Highlights:</strong>
+                <ul class="highlights-list">
+                    <li>Orientation to NCHU life 🏫</li>
+                    <li>Health insurance & ARC tips 📝</li>
+                    <li>Senior-Junior Networking 🤝</li>
+                    <li>Refreshments provided 🥤</li>
+                </ul>
+                <p><strong>Open to:</strong> New Indian Students Only</p>
+                <a href="#" class="btn btn-disabled">Details Coming Soon</a>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="card-header">Diwali Celebration 2026</div>
+            <div class="card-body">
+                <span class="date-badge">Oct / Nov 2026</span>
+                <div class="event-tag"><i class="fas fa-fire"></i> Festival of Lights</div>
+                <p>The biggest festival of the year! Join us for the traditional lighting of lamps and a spectacular evening.</p>
+                
+                <strong>Event Highlights:</strong>
+                <ul class="highlights-list">
+                    <li>Diya-lighting ceremony 🪔</li>
+                    <li>Cultural performances 🎶</li>
+                    <li>Indian snacks & sweets 🍬</li>
+                    <li>Photo booth & Games 📸</li>
+                </ul>
+                <p><strong>Open to:</strong> All Students (~100 seats)</p>
+                <a href="#" class="btn btn-disabled">Save the Date</a>
             </div>
         </div>
 
