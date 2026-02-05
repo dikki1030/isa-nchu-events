@@ -8,195 +8,83 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* --- GLOBAL STYLES --- */
-        :root {
-            --nchu-blue: #004F9F;
-            --nchu-gold: #FFD700;
-            --text-dark: #333;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* --- STYLES --- */
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; text-align: center; color: #333; }
         
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: white;
-            color: var(--text-dark);
-            width: 100%;
-        }
-
-        a { text-decoration: none; }
-
-        /* --- MAIN CONTAINER --- */
-        .main-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-            padding: 0 20px;
-        }
-
-        /* --- HERO SECTION --- */
+        /* HERO SECTION */
         .hero {
-            /* Placeholder image of university life */
             background: linear-gradient(rgba(0, 79, 159, 0.8), rgba(0, 79, 159, 0.6)), 
                         url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 80px 20px;
-            text-align: center;
+            padding: 100px 20px;
             border-radius: 0 0 20px 20px;
-            margin-bottom: 50px;
         }
 
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px auto; opacity: 0.9; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
 
+        /* THE MAGIC BUTTONS */
         .btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 15px 35px;
             border-radius: 50px;
-            font-weight: 600;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            border: none;
             transition: 0.3s;
-            margin: 5px;
+            margin: 10px;
+            text-decoration: none; /* Removes underline */
         }
-        .btn-gold { background: var(--nchu-gold); color: var(--nchu-blue); }
-        .btn-gold:hover { background: #ffe033; transform: translateY(-3px); }
+
+        .btn-gold { 
+            background-color: #FFD700; 
+            color: #004F9F; 
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+        }
         
-        .btn-outline { border: 2px solid white; color: white; }
-        .btn-outline:hover { background: white; color: var(--nchu-blue); transform: translateY(-3px); }
-
-        /* --- SECTION HEADERS --- */
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
-        .section-title { font-size: 1.8rem; color: var(--nchu-blue); font-weight: 700; }
-        .view-all-link { color: #666; font-size: 0.9rem; font-weight: 600; }
-        .view-all-link:hover { color: var(--nchu-blue); }
-
-        /* --- EVENTS PREVIEW SECTION --- */
-        .events-preview { margin-bottom: 60px; }
-        .events-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .event-card {
-            background: white;
-            border: 1px solid #eee;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: 0.3s;
-        }
-        .event-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .event-date { background: var(--nchu-blue); color: white; padding: 10px; font-weight: bold; text-align: center; }
-        .event-body { padding: 20px; }
-        .event-body h3 { margin-bottom: 10px; font-size: 1.2rem; }
-        .event-body p { color: #666; font-size: 0.9rem; margin-bottom: 15px; }
-
-        /* --- GALLERY GLIMPSE SECTION --- */
-        .gallery-preview { margin-bottom: 60px; }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-        }
-        .gallery-item {
-            height: 200px;
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.3s;
-        }
-        .gallery-item:hover img { transform: scale(1.1); }
-
-        @media (max-width: 768px) {
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        .btn-gold:hover { 
+            background-color: #ffe033; 
+            transform: translateY(-3px); 
         }
 
-        /* --- CONTACT BANNER --- */
-        .contact-banner {
-            background: var(--nchu-blue);
-            color: white;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
+        .btn-outline { 
+            background: transparent; 
+            border: 2px solid white; 
+            color: white; 
         }
-        .contact-banner h2 { margin-bottom: 10px; }
-        .contact-banner p { margin-bottom: 20px; opacity: 0.9; }
+
+        .btn-outline:hover { 
+            background: white; 
+            color: #004F9F; 
+        }
 
     </style>
+    
+    <script>
+        // THIS SCRIPT FORCES THE LINK TO OPEN
+        function goToPage(url) {
+            window.open(url, '_top');
+        }
+    </script>
 </head>
 <body>
 
     <div class="hero">
-        <div class="main-container">
-            <h1>Welcome to ISA NCHU</h1>
-            <p>Your home away from home. Join our community of international students.</p>
-            <a href="" target="_top" class="btn btn-gold">Upcoming Events</a>
-            
-            <a href="https://sites.google.com/view/indianstudentsassociationnchu/contact-us" target="_top" class="btn btn-outline">Join the community </a>
-        </div>
+        <h1>Welcome to ISA NCHU</h1>
+        <p>Your home away from home.</p>
+        
+        <button class="btn btn-gold" onclick="goToPage('https://sites.google.com/view/indianstudentsassociationnchu/events')">
+            Upcoming Events
+        </button>
+
+        <button class="btn btn-outline" onclick="goToPage('https://sites.google.com/view/indianstudentsassociationnchu/contact-us')">
+            Join Us
+        </button>
     </div>
-
-    <div class="main-container">
-
-        <section class="events-preview">
-            <div class="section-header">
-                <div class="section-title">Happening Soon</div>
-                <a href="https://sites.google.com/view/indianstudentsassociationnchu/events" target="_top" class="view-all-link">View All Events <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="events-grid">
-                <div class="event-card">
-                    <div class="event-date">APRIL 2026</div>
-                    <div class="event-body">
-                        <h3>Indian Night 2026</h3>
-                        <p>Cultural showcase, food, music, and dance. Open to all students!</p>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <div class="event-date">OCT/NOV 2026</div>
-                    <div class="event-body">
-                        <h3>Diwali Festival</h3>
-                        <p>The festival of lights. Diya lighting, sweets, and performances.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="gallery-preview">
-            <div class="section-header">
-                <div class="section-title">Gallery Glimpse</div>
-                <a href="https://dikki1030.github.io/isa-nchu-events/gallery.html" target="_top" class="view-all-link">See All Photos <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=400&q=80" alt="Event 1"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=400&q=80" alt="Event 2"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=400&q=80" alt="Event 3"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544928147-79a79476e635?auto=format&fit=crop&w=400&q=80" alt="Event 4"></div>
-            </div>
-        </section>
-
-        <section class="contact-banner">
-            <h2>Have Questions?</h2>
-            <p>We are here to help you settle into life at NCHU.</p>
-            <a href="https://dikki1030.github.io/isa-nchu-events/contact.html" target="_top" class="btn btn-gold">Contact Us</a>
-        </section>
-
-    </div>
-    
-    <div style="height: 50px;"></div>
 
 </body>
 </html>
