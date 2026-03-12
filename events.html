@@ -34,7 +34,7 @@
         /* CARD GRID LAYOUT */
         .event-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
@@ -55,6 +55,14 @@
         .event-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* NEW: POSTER IMAGE STYLE */
+        .event-poster {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--nchu-gold);
         }
 
         .card-header {
@@ -131,21 +139,23 @@
     <div class="event-container">
         
         <div class="event-card">
-            <div class="card-header">Indian Night 2026</div>
+            <img src="indian-night-poster.jpg" alt="Indian Night Poster" class="event-poster">
+            
+            <div class="card-header">Unveiling India's Magical Night</div>
             <div class="card-body">
-                <span class="date-badge">April 2026</span>
+                <span class="date-badge">April 24, 2026</span>
                 <div class="event-tag"><i class="fas fa-globe"></i> Cultural Event & Networking</div>
-                <p>A grand unification of Holi, Ugadi, Gudi Padwa, and Maha Shivaratri into one massive cultural showcase.</p>
+                <p>Join us for Indian Night! A grand unification of cultural festivals into one massive showcase.</p>
                 
                 <strong>Event Highlights:</strong>
                 <ul class="highlights-list">
-                    <li>Multi-state cultural performances 🎭</li>
-                    <li>Traditional attire showcase 👗</li>
-                    <li>Authentic Indian Food Corner 🍛</li>
-                    <li>Music & Dance 💃</li>
+                    <li>Dance 💃</li>
+                    <li>Music 🎵</li>
+                    <li>Authentic Indian Food 🍛</li>
+                    <li>Live DJ 🎧</li>
                 </ul>
                 <p><strong>Open to:</strong> All Students & Faculty</p>
-                <a href="#" class="btn btn-disabled">Registration Opens Soon</a>
+                <a href="#" class="btn btn-disabled">Details Coming Soon</a>
             </div>
         </div>
 
